@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+canvas {
+    display: block;
+    background-color: blue;
+    color: white;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: 900;
+}
+table {
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: white;
+}
+caption {
+    padding: 5px;
+}
+th, td {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: 10px;
+}
+button {
+    background-color: lightgray;
+    color: black;
+    border-style: outset;
+    border-color: lightgray;
+    border-width: 3px;
+    font-size: 1.5rem;
+}
+button:active {
+    border-style: inset;
+}
+#keyboard {
+    background-color: lightyellow;
+    padding: 5px;
+}
+kbd {
+    font-family: monospace;
+    padding: 5px;
+    margin: 5px;
+}
+.key {
+    border-style: outset;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: lightgray;
+    background-color: lightgray;
+    padding: 4px;
+}

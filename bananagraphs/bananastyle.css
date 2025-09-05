@@ -1,0 +1,65 @@
+body {
+    background-image: url(banana.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    max-width: 65rem;
+    margin-bottom: 50vh;
+}
+header {
+    background-color: yellow;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 10px;
+    color: saddlebrown;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1rem;
+}
+a {
+    color: blue;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: overline;
+}
+a:visited {
+    color: purple;
+}
+section + section{
+    margin-top: 2rem;
+}
+li {
+    padding: 0rem;
+}
+ul ul {
+    padding: 0rem;
+    padding-left: 4rem;
+}
+.hoomin {
+    font-family: serif;
+    color: blue;
+}
+del {
+    text-decoration-color: red;
+    text-decoration-line: line-through;
+}
+.illis {
+    display: block;
+    width: 80%;
+}

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Twelve Fan Club</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Twelve's <big>Q&amp;A</big> Column</h1>
+        </header>
+        <nav>
+            <a href="../index.htm">Go back to the boring old MFM homepage</a>
+            <h2>Twelve Fan Club Navigation</h2>
+            <h3>Main Links</h3>
+            <a href="index.htm">Home</a><br>
+            <a href="latest-blog.htm">My Latest Bananagraph</a><br>
+            <a href="contact.htm">Contact Me</a><br>
+            <a href="qa.htm">Twelve's Q&amp;A Column</a><br>
+            <h3>More Pages</h3>
+            <a href="menu.htm">Twelve Fan Club Site Menu</a><br>
+        </nav>
+        <main>
+            <p>
+                <big>Hey! I can't answer questions if nobody <em>asks</em> me any!</big> So <a href="contact.htm">send me an email</a> and ask me a question. I might answer it here.
+            </p>
+            <div id="qa-section">
+                <noscript>
+                    <b>Fatal Error:</b><br>
+                    JavaScript is required to load Q&amp;A topics.
+                </noscript>
+                <dialog id="qa-dialog">
+                    <div id="qa-answer">
+                    </div>
+                </dialog>
+                <script>
+                    document.open();
+                    var topics = [
+                        ["Why did you open a Q&amp;A column? - Riley", "Well, web codin' geek hoo mayd the main MFM page, because iym reelee smart and peepole no to kum tu mee for there qeschins beekuz iye no all thu ansurs.<br>- Twelve"]
+                    ];
+                    topics.forEach((value, index) => {
+                        document.write(
+                            "<div class='qa-topic'>" + value[0] + "<button onclick='displayTopic(" + index + ")'>Twelve's Answer</button><hr></div>"
+                        );
+                    });
+                    function displayTopic(index) {
+                        var dialog = document.getElementById("qa-dialog");
+                        var answerBox = document.getElementById("qa-answer");
+                        var Q = topics[index][0];
+                        var A = topics[index][1];
+                        answerBox.innerHTML = "<button onclick='closeTopic()'>Close</button><h3>Q: " + Q + "</h3><p><big>A: </big>" + A + "</p><button onclick='closeTopic()'>Close</button>";
+                        dialog.show();
+                    }
+                    function closeTopic() {
+                        var dialog = document.getElementById("qa-dialog");
+                        dialog.close();
+                    }
+                </script>
+            </div>
+        </main>
+    </body>
+</html>

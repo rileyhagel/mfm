@@ -1,0 +1,264 @@
+/* MONKEYS FOR MONKEYS STYLESHEET */
+
+/* main element styles */
+
+body {
+    background-color: saddlebrown;
+    font-family: sans-serif;
+}
+header {
+    background-color: yellow;
+    color: saddlebrown;
+    margin: 5px;
+    margin-top: 0px;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: saddlebrown;
+}
+nav {
+    background-color: antiquewhite;
+    color: saddlebrown;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+header + nav {
+    margin: 5px;
+    margin-top: 6.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: saddlebrown;
+}
+main {
+    background-color: white;
+    color: black;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: orange;
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13rem;
+    margin-bottom: 6rem;
+}
+article {
+    background-color: white;
+    color: black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: blue;
+    text-align: justify;
+}
+section {
+    background-color: white;
+    color: black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: saddlebrown;
+}
+footer {
+    background-color: yellow;
+    color: saddlebrown;
+    margin: 0px;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: saddlebrown;
+}
+
+/* text element styles */
+
+h1 {
+    margin: 2px;
+    padding: 2px;
+    font-size: 3rem;
+}
+h2 {
+    margin: 2px;
+    padding: 2px;
+    font-size: 2.5rem;
+}
+h3 {
+    margin: 2px;
+    padding: 2px;
+    font-size: 2rem;
+}
+h4 {
+    margin: 2px;
+    padding: 2px;
+    font-size: 1.5rem;
+}
+p {
+    margin: 2px;
+    padding: 2px;
+    font-size: 1rem;
+}
+p + p {
+    margin-top: 1rem;
+}
+big {
+    font-size: 1.5em;
+}
+ul {
+    margin-bottom: 1rem;
+}
+
+/* iframe styles */
+
+nav iframe {
+    width: 100%;
+    height: 2.5rem;
+    margin: 0px;
+    border-style: none;
+}
+
+/* a tag styles */
+
+a {
+    font-size: 1rem;
+    color: blue;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: overline;
+}
+a:visited {
+    color: purple;
+}
+nav a {
+    color: blue;
+    font-weight: bolder;
+}
+nav a:visited {
+    color: red;
+}
+
+/* Form Styles */
+
+form {
+    background-color: saddlebrown;
+    color: yellow;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+label {
+    font-size: 1rem;
+}
+button {
+    font-size: 1rem;
+    padding: 2px;
+    color: black;
+    background-color: lightgray;
+    border-style: groove;
+    border-color: darkgray;
+    border-radius: 5px;
+    border-width: 5px;
+}
+button:hover {
+    border-style: outset;
+}
+button:active {
+    border-style: inset;
+}
+input {
+    font-size: 1rem;
+    font-family: cursive;
+    border-style: inset;
+    border-width: 5px;
+    border-color: darkgray;
+    border-radius: 5px;
+    color: black;
+    background-color: lightgray;
+}
+input:focus {
+    background-color: white;
+}
+fieldset {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: yellow;
+}
+legend {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Table Styles */
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+caption {
+    font-size: 2rem;
+}
+thead {
+    border-style: solid;
+    border-color: black;
+    border-bottom-style: double;
+    border-bottom-width: 3px;
+}
+th {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 5px;
+}
+td {
+    text-align: left;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 5px;
+}
+
+/* Other Tags */
+
+progress {
+    display: block;
+    width: 90%;
+    margin: auto;
+    height: 1rem;
+}

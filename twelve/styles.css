@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    color: black;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    padding: 10px;
+}
+header {
+    background-color: white;
+}
+nav {
+    float: left;
+    max-width: 25rem;
+    min-height: 100vh;
+    background-color: yellow;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 0px;
+}
+nav a {
+    font-weight: bold;
+}
+main {
+    float: none;
+    width: 98%;
+    min-height: 100vh;
+    background-color: lightgreen;
+    padding: 20px;
+    margin: 10px;
+}
+h1 {
+    font-size: 3rem;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+.headerImg {
+    display: inline-block;
+    max-height: 40vh;
+    width: auto;
+}
+p {
+    margin: 5px;
+    margin-bottom: 1rem;
+}
+big {
+    font-size: 1.25em;
+}
+a {
+    color: blue;
+}
+#browser-support {
+    background-color: white;
+    clear: both;
+}
+#browser-support img {
+    max-width: 40rem;
+    display: inline;
+}
+.marquee {
+    width: 100%;
+    background-color: black;
+    color: red;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 2.5rem;
+    padding: 0px;
+}
+.marquee a {
+    color: yellow;
+}
+button {
+    background-color: lightgray;
+    color: black;
+    padding: 3px;
+    border-style: outset;
+    border-color: lightgray;
+    border-width: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+button:active {
+    border-style: inset;
+}
+#qa-dialog {
+    background-color: beige;
+    color: black;
+    font-family: cursive;
+    border-style: none;
+    max-width: 30rem;
+    position: fixed;
+}

@@ -1,0 +1,14 @@
+{
+    "MFM-e.g.000": {
+        "name": "Example",
+        "price": 1.99,
+        "info": "Information",
+        "keywords": [
+            "test",
+            "example"
+        ],
+        "images": [
+            "img_001.png"
+        ]
+    }
+}

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Super Cool Animated Intro</title>
+        <style>
+            
+            noscript {
+                background-color: white;
+                color: red;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            body {
+                background-image: url(wellThatSucks.gif);
+                background-size: contain;
+                background-repeat: space;
+                width: 95vw;
+                height: 95vh;
+            }
+            body a {
+                display: block;
+                margin: 5px;
+                padding: 0px;
+                font-size: 3rem;
+                font-family: sans-serif;
+                color: red;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <noscript>
+            Well, darn. It looks like you have JavaScript turned off, so you can't see the super cool animated intro. Oh well.<br><br>
+            <a href="index.htm">Come on in!</a>
+        </noscript>
+        
+        <script>
+            
+            document.body.style.backgroundImage = "url(tfc-intro.gif)";
+            setTimeout (
+                function () {
+                    var a = document.createElement("a");
+                    document.querySelector("body").append(a);
+                    a.setAttribute("href", "index.htm");
+                    a.innerHTML = "Come on In!";
+                    a.click();
+                }, 4900
+            );
+            setInterval (
+                function () {
+                    var a = document.querySelector("a");
+                    a.setAttribute("style", "color: blue; margin-left: 15px; margin-top: 15px;");
+                    setTimeout (
+                        function () {
+                            a.setAttribute("style", "color: red;");
+                        }, 700
+                    );
+                }, 1400
+            );
+            
+        </script>
+    </body>
+</html>

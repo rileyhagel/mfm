@@ -1,0 +1,96 @@
+<html>
+
+    <head>
+    
+        <title>Monkeys For Monkeys</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icon.svg">
+        
+        <style>
+            
+            #bananagraph-list {
+                margin: 0.5rem;
+                color: black;
+                background-color: white;
+                border-radius: 10px;
+                padding: 0.5rem;
+            }
+            .graphFrame {
+                display: block;
+                margin: auto;
+                background-color: white;
+                border-radius: 10px;
+                border-style: none;
+                width: 100%;
+                height: 95vh;
+                max-height: 60rem;
+            }
+            #status {
+                padding: 4px;
+            }
+            
+        </style>
+    
+    </head>
+    <body>
+    
+        <header>
+        
+            <h1>Monkeys For Monkeys</h1>
+        
+        </header>
+        
+        <nav aria-label="Site Navigation">
+        
+            <iframe src="nav.htm"></iframe>
+        
+        </nav>
+        <main>
+        
+            <h2>Banana Blog</h2>
+            <p>The Banana Blog is Twelve Monkey the Chimpanzee's blog. Anything posted on the blog is called a <i>bananagraph</i>.</p>
+            <nav aria-label="Blog Navigation">
+            
+                <h2 id="fetchHead">Fetch Bananagraphs</h2>
+                <noscript>JavaScript is required to use this feature. Please turn JavaScript back on in your browser.</noscript>
+                <noscript style="color: red;">
+                        <strong>Fatal Error:</strong><br>
+                        JavaScript is turned off in your browser, so this page won't work.
+                </noscript>
+
+                <form>
+                    
+                    <h3>Looking for a particular bananagraph?</h3>
+                    <label for="code">bananagraph code:</label>
+                    <br>
+                    <input type="text" id="code" name="bananagraph" placeholder="YYYY-MM-DD" maxlength="20">
+                    <br><br>
+                    <button>Retrieve Bananagraph</button>
+                    
+                </form>
+                <h3>Bananagraph List</h3>
+                <button id="buttonLoad">Load/Refresh List</button>
+                <div id="bananagraph-list">
+                    <iframe id="list" class="graphFrame"></iframe>
+                </div>
+                
+            </nav>
+            <h2 id="openGraphHead">Open Bananagraph</h2>
+            <iframe id="open-bananagraph" class="graphFrame"></iframe>
+            
+            <br>
+        
+        </main>
+        <footer>
+        
+            <p>
+                Monkeys for Monkeys (MFM)
+                <script src="footer.js"></script>
+            </p>
+        
+        </footer>
+    
+    </body>
+    <script src="blog.js"></script>
+
+</html>
