@@ -86,10 +86,18 @@ button:active {
     border-style: inset;
 }
 #qa-dialog {
+    overflow: scroll;
     background-color: beige;
     color: black;
     font-family: cursive;
     border-style: none;
     max-width: 30rem;
-    position: fixed;
+    max-height: 70vh;
+    position: absolute;
+}
+.qa-topic span {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
