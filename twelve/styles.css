@@ -89,7 +89,7 @@ button:active {
     overflow: scroll;
     background-color: beige;
     color: black;
-    font-family: cursive;
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
     border-style: none;
     max-width: 30rem;
     max-height: 70vh;

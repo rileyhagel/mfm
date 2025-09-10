@@ -22,7 +22,12 @@
             <p>
                 <big>Hey! I can't answer questions if nobody <em>asks</em> me any!</big> So <a href="contact.htm">send me an email</a> and ask me a question. I might answer it here.
             </p>
+            <p>
+                <strong>Note:<br>
+                    Pressing the "Refresh" button each time you visit this page will make sure your browser checks for new questions on the server instead of just showing the ones in the local cache.</strong>
+            </p>
             <div id="qa-section">
+                <button onclick="reload()">Refresh</button>
                 <noscript>
                     <b>Fatal Error:</b><br>
                     JavaScript is required to load Q&amp;A topics.
@@ -31,7 +36,13 @@
                     <div id="qa-answer">
                     </div>
                 </dialog>
+                <hr>
                 <script>
+                    // Force a server reload to bypass the browser cache. This ensures that new questions are shown.
+                    function reload () {
+                        window.location.replace(window.location.pathname);
+                    }
+                    
                     document.open();
                     var topics = [
                         [
