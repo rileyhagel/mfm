@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Twelve Fan Club</title>
+        <style>
+            @font-face {
+                font-family: 'Technology';
+                src: url('fonts/technology.bold.woff2');
+            }
+            #case {
+                width: 360;
+                height: 600;
+                background-color: #111;
+                padding: 35px;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            #display {
+                height: 64px;
+                width: 100%;
+                background-color: #020;
+                border-style: inset;
+                border-color: #111;
+                border-radius: 10px;
+                padding: 2px;
+                padding-right: 14px;
+                font-family: Technology;
+                font-size: 60px;
+                text-align: right;
+                color: #00ec00
+            }
+            .key {
+                height: 40px;
+                width: 50px;
+                margin: 10px;
+                padding: 1px;
+                text-align: center;
+                display: inline-block;
+                border-style: outset;
+                border-color: #aaa;
+                border-radius: 5px;
+                border-width: 3px;
+                background-color: #aaa;
+                font-size: 20px;
+                font-family: monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="case">
+            <div id="display"></div>
+            <button class="key">√</button>
+        </div>
+    </body>
+</html>

@@ -48,7 +48,7 @@ h3 {
 }
 .headerImg {
     display: inline-block;
-    max-height: 40vh;
+    height: 375;
     width: auto;
 }
 p {
@@ -61,14 +61,6 @@ big {
 }
 a {
     color: blue;
-}
-#browser-support {
-    background-color: white;
-    clear: both;
-}
-#browser-support img {
-    max-width: 40rem;
-    display: inline;
 }
 .marquee {
     width: 100%;
