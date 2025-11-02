@@ -233,6 +233,7 @@ table {
     border-style: solid;
     border-color: black;
     border-width: 2px;
+    font-size: 1.5rem;
 }
 caption {
     font-size: 2rem;
@@ -264,4 +265,8 @@ progress {
     width: 90%;
     margin: auto;
     height: 1rem;
+}
+.marquee a {
+    color: yellow;
+    font-size: inherit;
 }

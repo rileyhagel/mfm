@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>The Nerd Squad</title>
+        <style>
+            body {
+                font-family: Georgia, Times, "Times New Roman";
+                background-color: antiquewhite;
+                text-align: center;
+                margin: 0;
+                padding: 20px;
+            }
+            header {
+                max-width: 60rem;
+                background-color: floralwhite;
+                margin: auto;
+                padding: 10px;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+            }
+            main {
+                max-width: 60rem;
+                background-color: floralwhite;
+                margin: auto;
+                padding: 10px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+            h1 {
+                margin: 0;
+                padding: 5px;
+            }
+            #comicBox {
+                padding: 10px;
+                max-width: 95%;
+            }
+            #commentBox {
+                max-width: 95%;
+                text-align: left;
+                padding: 10px;
+                font-size: 1.2rem;
+            }
+            button {
+                font-size: 1rem;
+                font-family: inherit;
+                padding: 5px;
+                margin: 0px;
+                border-color: lightgray;
+                background-color: lightgray;
+                border-style: outset;
+                border-width: 5px;
+            }
+            button:active {
+                border-style: inset;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="../math.htm">&lt;-- Back to Twelve's Nerdy Math Zone</a>
+            <h1>The Nerd Squad</h1>
+        </header>
+        <main>
+            <button onclick="loadOld()">|&lt;-- Oldest</button>
+            <button onclick="loadPrev()">&lt;-- Prev.</button>
+            <button onclick="loadRand()">Random</button>
+            <button onclick="loadNext()">Next --&gt;</button>
+            <button onclick="loadNew()">Newest --&gt;|</button>
+            <br>
+            <a href="" id="permalink"></a>
+            <img id="comicBox" style="">
+            <div id="commentBox"></div>
+            <button onclick="loadOld()">|&lt;-- Oldest</button>
+            <button onclick="loadPrev()">&lt;-- Prev.</button>
+            <button onclick="loadRand()">Random</button>
+            <button onclick="loadNext()">Next --&gt;</button>
+            <button onclick="loadNew()">Newest --&gt;|</button>
+        </main>
+        <script src="comic-load.js"></script>
+    </body>
+</html>

@@ -2,6 +2,7 @@
     <head>
         <title>Twelve Fan Club</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="joke-generator.js"></script>
     </head>
     <body>
         <header>
@@ -10,7 +11,9 @@
                         The <big>Twelve Fan</big> Club
                     </marquee>
                 </h1>
-            <marquee behavior="scroll" direction="right" scrollamount="1" scrolldelay="7" truespeed style="width: 100%">
+            Tip: Hover your cursor over these marquees to stop them. Move the cursor away to go again.
+            <!-- Card scroller -->
+            <marquee behavior="scroll" direction="right" scrollamount="1" scrolldelay="7" truespeed style="width: 100%" onmouseover="this.stop();" onmouseout="this.start();">
                 <div style="text-align: center;">
                     <img src="twelve-keyboard.jpg" height="375" class="headerImg">
                     <img src="tv-twelve.jpg" height="375" class="headerImg" title="Twelve -- As Seen On TV!">
@@ -19,8 +22,12 @@
                     <img src="netscape-navigator.gif" class="headerImg">
                 </div>
             </marquee>
-            <marquee class="marquee" behavior="scroll" direction="left" scrollamount="1" scrolldelay="10" truespeed>
-                <script src="joke-generator.js"></script>
+            
+            <!-- Text Scroller -->
+            <marquee class="marquee" behavior="scroll" direction="left" scrollamount="1" scrolldelay="10" truespeed onmouseover="this.stop();" onmouseout="this.start();">
+                <span style="color: dodgerblue;">Coming Soon: Twelve's Nerdy Math Zone</span>
+                <img src="blackSpace.gif" style="width: 50rem; height: 1rem;">
+                <script>randJoke();</script>
             </marquee>
         </header>
         <br>

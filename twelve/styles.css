@@ -7,7 +7,6 @@ body {
     max-width: 70rem;
     margin-left: auto;
     margin-right: auto;
-    min-height: 100vh;
     padding: 10px;
 }
 header {
@@ -103,4 +102,7 @@ button:active {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+.inline {
+    display: inline;
 }
