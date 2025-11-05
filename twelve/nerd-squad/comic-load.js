@@ -1,6 +1,6 @@
 var comics = [
     ["nerd-squad-0.jpg", "This is a hotfix so people don't get confused when <code>nerd-squad.htm?n=2</code> gets them comic 3. Now, index zero <em>is</em> comic zero, and not 1."],
-    ["nerd-squad-1.jpg", "Man, I wish I could make cool slides like that."],
+    ["nerd-squad-1.jpg", "Man, I wish I could make cool slides like that.<br>UPDATE November 5: Oh crap, I forgot the <var>x</var> in my equations! It should be <var>y</var>=<var>m</var><var>x</var>+<var>b</var>, but I did <var>y</var>=<var>m</var>+<var>b</var>. Please pretend that there is an <var>x</var> after the fractions in both equations. Whoops. I've <em>never</em> made that mistake in Algebra at least..."],
     ["nerd-squad-2.jpg", "<pre>Math ERROR<br><br>[AC]  :Cancel<br>[<][>]:Goto<pre>"],
     ["nerd-squad-3.jpg", "If only it were practical... I wonder how he stuck on those fake arms."],
     ["nerd-squad-4.jpg", "Oops, I actually forgot to draw that guy's head (in the KA-CHUNK! panel) before I scanned it in to my computer."],
@@ -54,7 +54,7 @@ var comicItem = comics[currentNum];
 comicBox.src = "img/" + comicItem[0];
 comicBox.title = comicItem[1];
 commentBox.innerHTML = comicItem[1];
-permalinkAnchor.innerHTML = "Permalink: https://rileyhagel.github.io/mfm/twelve/nerd-squad/nerd-squad.htm?n=" + currentNum;
+permalinkAnchor.innerHTML = "https://rileyhagel.github.io/mfm/twelve/nerd-squad/nerd-squad.htm?n=" + currentNum;
 permalinkAnchor.href = "https://rileyhagel.github.io/mfm/twelve/nerd-squad/nerd-squad.htm?n=" + currentNum;
-imgUrlAnchor.innerHTML = "Image URL for embedding/hotlinking: https://rileyhagel.github.io/mfm/twelve/nerd-squad/img/" + comicItem[0];
+imgUrlAnchor.innerHTML = "https://rileyhagel.github.io/mfm/twelve/nerd-squad/img/" + comicItem[0];
 imgUrlAnchor.href = "https://rileyhagel.github.io/mfm/twelve/nerd-squad/img/" + comicItem[0];
