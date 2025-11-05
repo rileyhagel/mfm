@@ -11,6 +11,7 @@ var currentNum = comics.length - 1;
 var comicBox = document.getElementById("comicBox");
 var commentBox = document.getElementById("commentBox");
 var permalinkAnchor = document.getElementById("permalink");
+var imgUrlAnchor = document.getElementById("imgurl");
 
 function update() {
     if (currentNum > comics.length - 1) {
@@ -55,3 +56,5 @@ comicBox.title = comicItem[1];
 commentBox.innerHTML = comicItem[1];
 permalinkAnchor.innerHTML = "Permalink: https://rileyhagel.github.io/mfm/twelve/nerd-squad/nerd-squad.htm?n=" + currentNum;
 permalinkAnchor.href = "https://rileyhagel.github.io/mfm/twelve/nerd-squad/nerd-squad.htm?n=" + currentNum;
+imgUrlAnchor.innerHTML = "Image URL for embedding/hotlinking: https://rileyhagel.github.io/mfm/twelve/nerd-squad/img/" + comicItem[0];
+imgUrlAnchor.href = "https://rileyhagel.github.io/mfm/twelve/nerd-squad/img/" + comicItem[0];
