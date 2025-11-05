@@ -1,9 +1,11 @@
 var comics = [
+    ["nerd-squad-0.jpg", "This is a hotfix so people don't get confused when <code>nerd-squad.htm?n=2</code> gets them comic 3. Now, index zero <em>is</em> comic zero, and not 1."],
     ["nerd-squad-1.jpg", "Man, I wish I could make cool slides like that."],
     ["nerd-squad-2.jpg", "<pre>Math ERROR<br><br>[AC]  :Cancel<br>[<][>]:Goto<pre>"],
     ["nerd-squad-3.jpg", "If only it were practical... I wonder how he stuck on those fake arms."],
     ["nerd-squad-4.jpg", "Oops, I actually forgot to draw that guy's head (in the KA-CHUNK! panel) before I scanned it in to my computer."],
-    ["nerd-squad-5.jpg", "How to turn gears into quality-ground wheels.<br>P.S.: I accidentally drew an extra crown gear on one of the panels... You can probably figure it out."]
+    ["nerd-squad-5.jpg", "How to turn gears into quality-ground wheels.<br>P.S.: I accidentally drew an extra crown gear on one of the panels... You can probably figure it out."],
+    ["nerd-squad-6.jpg", 'Here is a video of the trojan on YouTube. I did not make this video, and have absolutely nothing to do with it.<br><iframe width="560" height="315" src="https://www.youtube.com/embed/LSgk7ctw1HY?si=a1tZHvzl6IuxeGF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>']
 ];
 var currentNum = comics.length - 1;
 var comicBox = document.getElementById("comicBox");
