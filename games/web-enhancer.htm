@@ -1,0 +1,53 @@
+<html>
+
+    <head>
+    
+        <title>Web Enhancer -- Make webpages more fun!</title>
+        <link rel="stylesheet" href="game-style.css">
+        <style>
+            code {
+                background-color: lightgray;
+                padding: 10px;
+                display: block;
+                border-radius: 10px;
+            }
+        </style>
+    
+    </head>
+    <body>
+    
+        <h1>Web Enhancer -- Make webpages more fun!</h1>
+        <h2>How to play</h2>
+        <h3>The code</h3>
+        <div>WARNING -- THIS GAME CONTAINS HIGH-CONTRAST, FLASHING LIGHT SEQUENCES. PLAY AT YOUR OWN RISK!</div>
+        <p>
+            To play this game, copy the following scary-looking HTML to your clipboard:
+        </p>
+        <code>&lt;div style="background-color: white; color: black;"&gt;&lt;div style="background-color: yellow; color: red; border-color: red; border-style: solid; border-radius: 10px; padding: 10px; margin: 10px;"&gt;&lt;strong&gt;&lt;center&gt;&lt;big&gt;WARNING!&lt;/big&gt;&lt;/center&gt;&lt;br&gt;THIS SCRIPT CAUSES ELEMENTS ON THE PAGE TO FLASH BRIGHT, HIGH CONTRAST COLORS AND DO WIERD STUFF WITH IMAGES. PLEASE DON'T CLICK THE BUTTON THAT SAYS "FUN" IF THAT WILL GIVE YOU A SIEZURE. MFM TAKES NO RESPONSIBILITY FOR INJURY, INSANITY, OR ANY OTHER PHYSICAL OR MENTAL ISSUES CAUSED BY IT'S SOFTWARE.&lt;/strong&gt;&lt;/div&gt;&lt;center&gt;&lt;button onclick="fun()"&gt;FUN&lt;/button&gt;&lt;/center&gt;&lt;script src="https://rileyhagel.github.io/mfm/games/web-enhancer.js"&gt;&lt;/script&gt;&lt;/div&gt;</code>
+        <p>
+            Then, visit the website of your choice. I did this in chrome, but what you are about to do is about the same in most modern browsers. Next, enter the developer mode in your browser. You can normally do this by pressing <kbd><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd></kbd>.
+            Navigate to the Elements tab. You should see the code for the webpage. Yuck. Find the following tag:
+        </p>
+        <code>&lt;/body&gt;</code>
+        <p>
+            It should be at or near the bottom of the page. Right-click it. Select "Edit as HTML". Scroll to the bottom of all that mess. Put the cursor (the little line that blinks while you type) in right before &lt;/body&gt;.
+            <br>
+            <img src="game-files/dev-tools.png" alt="screenshot of dev tools at this point">
+            <br>
+            Now press <kbd><kbd>Ctrl</kbd>+<kbd>V</kbd></kbd> to paste the code in. Click outside the text-editing field (like, in the main browser viewport), and scroll to the bottom of the webpage. Find the button that says "FUN". Click it. Let the fun begin!<br>
+            Note: Wait about 3 seconds for things to start working. You can always click refresh to go back to normal, but why would you want to do that? If it dosn't work, then they probably have a bunch of content-policy headers getting in the way and there's nothing you can do about it :( .
+        </p>
+        <h3>The Example</h3>
+        <div style="background-color: white; color: black;">
+            <div style="background-color: yellow; color: red; border-color: red; border-style: solid; border-radius: 10px; padding: 10px; margin: 10px;">
+            <strong>
+                <center><big>WARNING!</big></center><br>
+                THIS SCRIPT CAUSES ELEMENTS ON THE PAGE TO FLASH BRIGHT, HIGH CONTRAST COLORS AND DO WIERD STUFF WITH IMAGES. PLEASE DON'T CLICK THE BUTTON THAT SAYS "FUN" IF THAT WILL GIVE YOU A SIEZURE. MFM TAKES NO RESPONSIBILITY FOR INJURY, INSANITY, OR ANY OTHER PHYSICAL OR MENTAL ISSUES CAUSED BY IT'S SOFTWARE.
+            </strong>
+            </div>
+            <center><button onclick="fun()">FUN</button></center>
+            <script src="web-enhancer.js"></script>
+        </div>
+    </body>
+
+</html>
