@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>
+            Marquee Type
+        </title>
+        <style>
+input[type=range] {
+  width: 500px;
+  max-width: 100%;
+  margin: 13.8px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -14px;
+  width: 16px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 14.8px 0;
+  color: transparent;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  width: 16px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
+            .controlButt {
+                width: 100px;
+                font-size: 2rem;
+                font-weight: bold;
+                font-family: sans-serif;
+                margin: 5px;
+                padding: 5px;
+                border-style: outset;
+                border-width: 5px;
+                border-color: lightgray;
+                background-color: lightgray;
+                text-align: center;
+            }
+            .controlButt:active {
+                border-style: inset;
+            }
+            .controlLabel {
+                font-size: 1.5rem;
+                font-weight: bold;
+                font-family: sans-serif;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Marquee Type!</h1>
+        <h2>Version 0.0</h2>
+        <p>
+            Please check back often, as this game will be recieving updates frequently and will continue to get new mechanics and features.
+            <br>
+            Oh, and don't worry, you can always come back and play <a href="marquee-type-old.htm">older versions.</a>
+        </p>
+        <p>This version is only the base mechanics, and has no game to it, yet.</p>
+        <marquee id="marquee" behavior="scroll" direction="left" scrollamount="0" scrolldelay="30" truespeed style="background-color: black; color: red; font-family: sans-serif; font-weight: bold; font-size: 2rem; border-style: inset; border-width: 5px; border-color: grey; border-radius: 10px;" contenteditable="true">
+            Click to edit!
+        </marquee>
+        <button class="controlButt" onclick="stop()">STOP</button><button class="controlButt" onclick="go()">GO</button>
+        <input type="range" id="speed" name="points" min="-10" max="10" value="0">
+        <label class="controlLabel" for="points">
+            Speed: <span class="controlLabel" id="current-value">0</span>
+        </label>
+        <p>
+            Note: Please wait for the text to go by for changes to take place, or press GO.
+        </p>
+        <script>
+            var slider = document.getElementById("speed");
+            var output = document.getElementById("current-value");
+            var marquee = document.getElementById("marquee");
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+                output.textContent = Math.abs(this.value);
+                if (this.value < 0) {
+                    marquee.direction = "left";
+                    marquee.setAttribute("scrollamount", Math.abs(this.value));
+                } else if (this.value > 0) {
+                    marquee.direction = "right";
+                    marquee.setAttribute("scrollamount", Math.abs(this.value));
+                } else {
+                    marquee.scrollamount = 0;
+                }
+            }
+            
+            function stop() {
+                marquee.stop();
+            }
+            function go() {
+                marquee.start();
+            }
+        </script>
+    </body>
+</html>
