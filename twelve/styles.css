@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
 html {
     font-size: 16px;
 }
@@ -12,14 +18,17 @@ body {
 header {
     background-color: white;
 }
+/* weird column crap */
+.columns {
+    display: flow-root;
+    min-height: 100vh;
+    padding: 10px;
+}
 nav {
     float: left;
-    max-width: 25rem;
-    min-height: 100vh;
+    width: 25rem;
     background-color: yellow;
     padding: 20px;
-    margin: 10px;
-    margin-top: 0px;
     font-size: 1.5rem;
 }
 nav a {
@@ -27,11 +36,10 @@ nav a {
 }
 main {
     float: none;
-    width: 98%;
-    min-height: 100vh;
     background-color: lightgreen;
     padding: 20px;
-    margin: 10px;
+    /* weird column crap */
+    margin-left: 25rem;
 }
 h1 {
     font-size: 4rem;
@@ -105,4 +113,13 @@ button:active {
 }
 .inline {
     display: inline;
+}
+dialog {
+    background-color: white;
+    color: black;
+    border-style: double;
+    border-color: black;
+    border-width: 3px;
+    max-width: 800px;
+    max-height: 600px;
 }

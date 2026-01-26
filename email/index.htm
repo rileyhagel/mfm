@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/twelve/styles.css">
+        <style>
+            #e-mail {
+                background-color: white;
+                width: 640px;
+                height: 480px;
+                border-style: double;
+                border-color: black;
+                border-width: 3px;
+                padding: 5px;
+                margin:0px;
+            }
+            textarea {
+                width: 640px;
+                height: 240px;
+                border-style: double;
+                border-color: black;
+                border-width: 3px;
+                padding: 5px;
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Twelve's HTML E-Mail Stationary</h1>
+        </header>
+        <main>
+            If this is your first time, click the [How To...?] button.
+            <br>
+            <button onclick="update();">
+                Update
+            </button>
+            |
+            <button onclick="dialog('tag');">
+                Tag Reference
+            </button>
+            <button onclick="dialog('help');">
+                How To...?
+            </button>
+            |
+            <button onclick="dialog('paper');">
+                Paper
+            </button>
+            <button onclick="">
+                Pens and Brushes
+            </button>
+            <br>
+            
+            <!-- DIALOGS -->
+            <dialog id="tag">
+                <h2>Tag Reference</h2>
+                <button onclick="document.getElementById('tag').close()">
+                    Close
+                </button>
+            </dialog>
+            <dialog id="help">
+                <h2>How To...?</h2>
+                <button onclick="document.getElementById('help').close()">
+                    Close
+                </button>
+            </dialog>
+            <dialog id="paper">
+                <h2>Paper</h2>
+                Select a paper type below:
+                <br>
+                <a href="">Printer Paper</a><br>
+                <a href="">Dark Manilla</a><br>
+                <a href="">Manilla</a><br>
+                <br>
+                <button onclick="document.getElementById('paper').close()">
+                    Close
+                </button>
+            </dialog>
+            <dialog id="pens">
+                <h2>Pens and Brushes</h2>
+                <button onclick="document.getElementById('pens').close()">
+                    Close
+                </button>
+            </dialog>
+            
+            <!-- PREVIEW -->
+            <iframe id="e-mail">
+                
+            </iframe>
+            <textarea id="input"><h1>Heading, Title</h1>
+<h2>Sub-Heading</h2>
+<h3>Sub-Sub-Heading</h3>
+Headings go all the way to <code>&amp;lt;h6&amp;gt;</code>!
+<br>
+<code>&amp;lt;br&amp;gt;</code> makes a line break.
+<br>
+<p>
+    This is a paragraph.
+</p>
+<p>
+    This is another paragraph.
+</p>
+<hr>
+</textarea>
+        </main>
+        <script>
+            var paperStyle = "";
+            var penStyle = "";
+            var content = "";
+            // Update the preview area
+            function update() {
+                content = "<div style='" + paperStyle + penStyle + "'>" + document.getElementById("input").value + "</div>";
+                const iframe = document.getElementById("e-mail");
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                iframeDoc.open();
+                iframeDoc.write(content);
+                iframeDoc.close();
+            }
+            function dialog(box) {
+                document.getElementById(box).show();
+            }
+            function setPen(font, size, color) {
+                penStyle = "font-family: " + font + "; font-size: " + size + "; color: " + color + ";";
+            }
+            function setPaper(paper, padding) {
+                paperStyle = "background-color: " + paper + "; padding: " + padding + ";";
+            }
+            setPen("'Comic Sans MS', 'Comic Sans', cursive", "1em", "black");
+            setPaper("antiquewhite", "10px");
+            update();
+            console.log(content);
+            console.log(penStyle);
+            console.log(paperStyle);
+            console.log(document.getElementById('input').value);
+        </script>
+    </body>
+</html>

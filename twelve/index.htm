@@ -25,13 +25,31 @@
             
             <!-- Text Scroller -->
             <marquee class="marquee" behavior="scroll" direction="left" scrollamount="1" scrolldelay="10" truespeed onmouseover="this.stop();" onmouseout="this.start();">
-                NEW: <a href="math.htm">Twelve's Nerdy Math Zone</a>
-                <img src="blackSpace.gif" style="width: 20rem; height: 1rem;">
+                <span style="background-color: #002244; color: #69BE28; padding-left: 20%; padding-right: 20%;">GO HAWKS</span>
                 <script>randJoke();</script>
             </marquee>
         </header>
-        <br>
-        <nav style="margin-top: 10px;">
+        
+        <!-- Advertisement Space -->
+        
+        <!--
+        <dialog id="topAd" style="text-align:center;font-size:1.5rem;" open>
+            Check out Twelve's new E-Mail Stationary!
+            <br>
+            You can choose cool paper, fun fonts, and more!
+            <br>
+            But don't take my word for it; find out for yourself!
+            <br>
+            <button onclick="window.open('about:blank');">Check it Out!</button>
+            <button onclick="document.getElementById('topAd').close();">
+                Close
+            </button>
+        </dialog>
+        -->
+        
+        <!-- MAIN CONTENT and NAV -->
+        <div class="columns">
+        <nav>
                 <a href="../index.htm">Go back to the boring old MFM homepage</a>
                 <h2>Twelve Fan Club Navigation</h2>
                 <h3>Main Links</h3>
@@ -42,6 +60,7 @@
                 <a href="math.htm">Twelve's Nerdy Math Zone</a><br>
                 <h3>More Pages</h3>
                 <a href="menu.htm">Twelve Fan Club Site Menu</a><br>
+            <script src="under-nav.js"></script>
         </nav>
         <main>
             <p>
@@ -51,5 +70,6 @@
                 Oh, yes, if you want to know about the guy who makes the main MFM site work, you can always go back to that webpage and find out. But you came here to find out about <em>me</em>. So go ahead and click Contact Me on the navigation sidebar. Or take a look at my Q&amp;A column page. (It might look empty because nobody goes to the Contact Me page.)
             </p>
         </main>
+        </div>
     </body>
 </html>
