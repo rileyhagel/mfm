@@ -5,7 +5,11 @@ var comics = [
     ["nerd-squad-3.jpg", "If only it were practical... I wonder how he stuck on those fake arms."],
     ["nerd-squad-4.jpg", "Oops, I actually forgot to draw that guy's head (in the KA-CHUNK! panel) before I scanned it in to my computer."],
     ["nerd-squad-5.jpg", "How to turn gears into quality-ground wheels.<br>P.S.: I accidentally drew an extra crown gear on one of the panels... You can probably figure it out."],
-    ["nerd-squad-6.jpg", 'Here is a video of the trojan on YouTube. I did not make this video, and have absolutely nothing to do with it.<br><iframe width="560" height="315" src="https://www.youtube.com/embed/LSgk7ctw1HY?si=a1tZHvzl6IuxeGF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>']
+    ["nerd-squad-6.jpg", 'Here is a video of the trojan on YouTube. I did not make this video, and have absolutely nothing to do with it.<br><iframe width="560" height="315" src="https://www.youtube.com/embed/LSgk7ctw1HY?si=a1tZHvzl6IuxeGF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'],
+    ["nerd-squad-7.jpg", "It's a wonder they aren't dead."],
+    ["nerd-squad-8.jpg", "Tristen wrote those 'funny numbers' on my comic during Algebra one day."],
+    ["nerd-squad-9.jpg", "Guess what happens when you draw dumb comics after a bunch of CAD assignments in Fusion 360?"],
+    ["nerd-squad-10.jpg", "Binary and Hexidecimal lesson in Cybersecurity. And yes, I did enjoy the lesson."]
 ];
 var currentNum = comics.length - 1;
 var comicBox = document.getElementById("comicBox");

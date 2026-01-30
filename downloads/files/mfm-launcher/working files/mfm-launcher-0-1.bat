@@ -1,11 +1,13 @@
 :: MFM Launcher v0.1
-:: from the Monkeys for Monkeys website: [URL]
-:: For any questions, please e-mail me at: contactmonkeysformonkeys+feedback@gmail.com
+:: from the Monkeys for Monkeys website: [ https://rileyhagel.github.io/mfm ]
+:: For any questions, please e-mail me at: contactmonkeysformonkeys+software@gmail.com
 
 @echo off
 title MFM Launcher
 color e4
 cls
+
+set "URL="
 
 echo.
 echo 	* * * * * * * * * * * *
@@ -19,4 +21,14 @@ echo 	2. Banana Blog
 echo 	3. Games
 echo 	4. Downloads
 echo.
-pause
+choice /c 1234 /n
+IF %ERRORLEVEL% EQU 4 goto downloads
+IF %ERRORLEVEL% EQU 3 goto downloads
+
+:MFMhomepage
+
+:bananaBlog
+
+:games
+
+:downloads
