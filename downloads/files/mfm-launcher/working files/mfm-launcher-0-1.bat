@@ -7,6 +7,7 @@ title MFM Launcher
 color e4
 cls
 
+set "baseURL=https://rileyhagel.github.io/mfm"
 set "URL="
 
 echo.
@@ -17,18 +18,31 @@ echo 	* * * * * * * * * * * *
 echo.
 echo.
 echo 	1. MFM Homepage
-echo 	2. Banana Blog
+echo 	2. Twelve Forum
 echo 	3. Games
 echo 	4. Downloads
 echo.
 choice /c 1234 /n
-IF %ERRORLEVEL% EQU 4 goto downloads
-IF %ERRORLEVEL% EQU 3 goto downloads
+IF %ERRORLEVEL% EQU 4 call downloads
+IF %ERRORLEVEL% EQU 3 call games
+IF %ERRORLEVEL% EQU 2 call twelveforum
+IF %ERRORLEVEL% EQU 1 call homepage
 
-:MFMhomepage
+set finalURL=%baseURL%/%URL%
+start "Loading Webpage..." %finalURL%
 
-:bananaBlog
+:homepage
+set "URL="
+goto :EOF
+
+:twelveforum
+set "URL=twelve/forum.htm"
+goto :EOF
 
 :games
+set "URL=games.htm"
+goto :EOF
 
 :downloads
+set "URL=downloads"
+goto :EOF
