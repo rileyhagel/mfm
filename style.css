@@ -90,9 +90,9 @@ footer {
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
     border-style: solid;
     border-width: 6px;
