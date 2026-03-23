@@ -2,25 +2,34 @@
     <head>
         <link rel="stylesheet" href="/twelve/styles.css">
         <script src="/mfm/ga.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             #e-mail {
                 background-color: white;
                 width: 640px;
                 height: 480px;
-                border-style: double;
-                border-color: black;
-                border-width: 3px;
-                padding: 5px;
-                margin:0px;
-            }
-            textarea {
-                width: 640px;
-                height: 240px;
+                max-width: 100%;
                 border-style: double;
                 border-color: black;
                 border-width: 3px;
                 padding: 5px;
                 margin: 0px;
+            }
+            textarea {
+                width: 640px;
+                height: 240px;
+                max-width: 100%;
+                border-style: double;
+                border-color: black;
+                border-width: 3px;
+                padding: 5px;
+                margin: 0px;
+            }
+            main {
+                margin-left: auto;
+            }
+            dialog {
+                max-height: 90vh;
             }
         </style>
     </head>
@@ -45,7 +54,7 @@
             <button onclick="dialog('paper');">
                 Paper
             </button>
-            <button onclick="">
+            <button onclick="dialog('pens')">
                 Pens and Brushes
             </button>
             <br>
@@ -53,12 +62,101 @@
             <!-- DIALOGS -->
             <dialog id="tag">
                 <h2>Tag Reference</h2>
+                <p>
+                    HTML tags consist of an opening tag and a closing tag. Example: <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code> The opening tag contains a letter or two, and the closing tag has a slash <code>/</code> before the letters.
+                </p>
+                <p>
+                    Some tags have no closing tag, because they have no text content. For example: <code>&lt;img src="example.com/image.jpg" alt="Example Image"&gt;</code>. The information inside the image opening tag example above consists of two attributes: src (source), and alt (alternate text to show if the image fails to load, or for people who use screen readers.)
+                </p>
+                <p>
+                    In the table below, parts of the tag in square brackets (<code>[]</code>) are optional. Do not type the square brackets; they are not part of the code, and simply denote the sections that are optional. Replace sections in <i>italics</i> with your own text.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tag</th><th>Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;p&gt;<i>content goes here</i>&lt;/p&gt;</code></td>
+                            <td>This is a paragraph tag. Use it for paragraphs.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;strong&gt;<i>content goes here</i>&lt;/strong&gt;</code></td>
+                            <td>Use to say something <strong>strongly</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;b&gt;<i>content goes here</i>&lt;/b&gt;</code></td>
+                            <td>Use to mark out <b>key words</b>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;em&gt;<i>content goes here</i>&lt;/em&gt;</code></td>
+                            <td>Use to say something with <em>emphasis</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;i&gt;<i>content goes here</i>&lt;/i&gt;</code></td>
+                            <td>Use to put something in <i>italics</i> when you are not speaking with emphasis.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;var&gt;<i>content goes here</i>&lt;/var&gt;</code></td>
+                            <td><var>y</var>=32<var>x</var>+9</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <button onclick="document.getElementById('tag').close()">
                     Close
                 </button>
             </dialog>
             <dialog id="help">
                 <h2>How To...?</h2>
+                <h3>Write the Email</h3>
+                <p>
+                    Type HTML into the text area to write the email. Click "Update" to see the email in the box above. To type a new line, pressing enter will not work. For example:
+                </p>
+                <pre>First Line
+Second Line
+                </pre>
+                <p>
+                    Will result in:<br>
+                    First Line Second Line
+                    <br><br>
+                    To enter new lines, use the <code>&lt;br&gt;</code> HTML tag. For example:
+                </p>
+                <pre>First Line &lt;br&gt;
+Second Line
+                </pre>
+                <p>
+                    Or:
+                </p>
+                <pre>First Line &lt;br&gt;Second Line
+                </pre>
+                <p>
+                    Will result in:
+                    <br>
+                    First Line
+                    <br>
+                    Second Line
+                </p>
+                <p>
+                    HTML also ignores extra whitespace. For example:
+                </p>
+                <pre><code>Super        Man</code></pre>
+                <p>
+                    Will result in:<br>
+                    Super Man<br>
+                    (One space)
+                </p>
+                <p>
+                    To learn how to write the HTML, close this dialog and click "Tag Reference".
+                </p>
+                <h3>Style your Email</h3>
+                <p>
+                    To change the background, click "Paper" and select a paper style. Some papers are image textures that are tiled across the page, and others are standart CSS colors.
+                </p>
+                <p>
+                    To change the typeface, click "Pens and Brushes" and select a typeface. All typefaces are basic browser font faces, as linking to remote font files or embedding them is not supported by most HTML email clients.
+                </p>
                 <button onclick="document.getElementById('help').close()">
                     Close
                 </button>
@@ -67,9 +165,10 @@
                 <h2>Paper</h2>
                 Select a paper type below:
                 <br>
-                <a href="">Printer Paper</a><br>
-                <a href="">Dark Manilla</a><br>
-                <a href="">Manilla</a><br>
+                <a href="javascript:setPaper('white', '10px')">Printer Paper</a><br>
+                <a href="javascript:setPaper('goldenrod', '10px')">Dark Manilla</a><br>
+                <a href="javascript:setPaper('antiquewhite', '10px')">Manilla</a><br>
+                <a href="javascript:setPaper('yellow', '10px')">Yellow</a><br>
                 <br>
                 <button onclick="document.getElementById('paper').close()">
                     Close
@@ -77,6 +176,15 @@
             </dialog>
             <dialog id="pens">
                 <h2>Pens and Brushes</h2>
+                <a href="javascript:setPen('cursive', '1rem', 'black');">Black Ballpoint Pen</a><br>
+                <a href="javascript:setPen('cursive', '1.2rem', 'black');">Large Black Ballpoint Pen</a><br>
+                <a href="javascript:setPen('cursive', '1rem', 'red');">Red Ballpoint Pen</a><br>
+                <a href="javascript:setPen('cursive', '1.2rem', 'red');">Large Red Ballpoint Pen</a><br>
+                <a href="javascript:setPen('cursive', '1rem', 'blue');">Blue Ballpoint Pen</a><br>
+                <a href="javascript:setPen('cursive', '1.2rem', 'blue');">Large Blue Ballpoint Pen</a><br>
+                <a href="javascript:setPen('monospace', '1rem', 'black');">Typewriter</a><br>
+                <a href="javascript:setPen('serif', '1rem', 'black');">Printing Press</a><br>
+                <a href="javascript:setPen('serif', '1.2rem', 'black');">Printing Press with Large Type</a><br>
                 <button onclick="document.getElementById('pens').close()">
                     Close
                 </button>
@@ -120,9 +228,15 @@ Headings go all the way to <code>&amp;lt;h6&amp;gt;</code>!
             }
             function setPen(font, size, color) {
                 penStyle = "font-family: " + font + "; font-size: " + size + "; color: " + color + ";";
+                update();
             }
             function setPaper(paper, padding) {
                 paperStyle = "background-color: " + paper + "; padding: " + padding + ";";
+                update();
+            }
+            function setPaperTex(paper, padding) {
+                paperStyle = "background-image: url(" + paper + "); padding: " + padding + ";";
+                update();
             }
             setPen("'Comic Sans MS', 'Comic Sans', cursive", "1em", "black");
             setPaper("antiquewhite", "10px");
