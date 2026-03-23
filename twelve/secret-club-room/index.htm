@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta name="robots" content="noindex">
+        <title>Secret Club Room</title>
+        <link rel="stylesheet" href="../styles.css">
+        <script src="/mfm/ga.js"></script>
+        <style>
+            nav {
+                float: none;
+                width: 100%;
+            }
+            main {
+                margin: auto;
+            }
+        </style>
+        
+        <!-- Login -->
+        <script>
+            alert("You are entering the secret clubroom, and access is restricted to members only. To leave, click cancel on the next dialog.");
+            confirm("Login?");
+            var usr = prompt("Enter Username:", "");
+            var pswd = prompt("Enter Password:", "");
+        </script>
+        <!-- End Login -->
+    </head>
+    <body>
+        <header>
+            <h1>Secret Club Room</h1>
+        </header>
+        <div class="columns">
+        <nav>
+            <a href="index.htm">Exit Clubroom</a>
+            ||
+            <a href="#">Messages</a>
+        </nav>
+        <main>
+            <noscript>
+                Javascript is required in the clubroom!
+            </noscript>
+        </main>
+        </div>
+    </body>
+</html>
