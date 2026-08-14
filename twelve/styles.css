@@ -6,6 +6,7 @@
 }
 html {
     font-size: 16px;
+    cursor: url('cursor.png') 3 3, auto;
 }
 body {
     font-family: sans-serif;
@@ -68,6 +69,16 @@ big {
 }
 a {
     color: blue;
+    cursor: url('cursor.png') 3 3, auto;
+    text-decoration: underline;
+}
+a:hover {
+    cursor: url('cursor.png') 3 3, auto;
+    text-decoration: none;
+}
+a:active {
+    cursor: url('cursor.png') 3 3, auto;
+    color: red;
 }
 .marquee {
     width: 100%;
