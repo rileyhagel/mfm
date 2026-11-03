@@ -1,8 +1,8 @@
 var text = `<hr>
 Coming Soon: Twelve's E-Mail Stationery
 <hr>
-<i>Nerd Squad</i> No. 7 - 10 released!<br>
-<a href="nerd-squad/nerd-squad.htm?n=7"><i>Nerd Squad</i> 7</a>
+<i>Nerd Squad</i> will move with the Twelve Fan Club!<br>
+<a href="nerd-squad/nerd-squad.htm">Go to the <i>Nerd Squad</i> comic!</a>
 <hr>`;
 
 document.open();
